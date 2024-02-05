@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (min-width: 700px) {
+  /*header*/
+  .mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /*grid*/
+  .categoryList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+  .productList article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .productList main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+article a {
+  border-radius: 5px;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 2px;
+}
+.productList article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.purchaseBox {
+  background: #d8d8d8;
+  color: white;
+  padding: 1rem;
+}
+.purchaseBox button {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+  font-weight: bold;
+
+  height: 50px;
+}
+label {
+  font-weight: bold;
+}
+.product select {
+  min-width: 100px;
+}
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  color: black;
+  height: 2.5rem;
+  background-color: white;
+  background-position: center right 0.5rem;
+}
+
+.productInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.productimg {
+  grid-row: 1/5;
+  grid-column: 1/2;
+}
+.info {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  margin: 1rem;
+}
+.purchaseBox {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.categoryList a {
+  text-decoration: none;
+  padding: 2em;
+  color: #d32323;
+  background-color: #cacaca;
+  border-radius: 20px;
+}
+a:hover {
+  color: blueviolet;
+}
+header a {
+  text-decoration: none;
+  margin: 20px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  color: #25008f;
+}
+body {
+  padding: 45px;
+  line-height: 1.563;
+  background-color: white;
+  border: solid 1px #d32323;
+  /* farve av strecket caret-color: red;*/
+}
+
+h2 {
+  font-family: "Inknut Antiqua", serif;
+  color: #d32323;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  font-size: 2.441rem;
+  letter-spacing: -0.12rem;
+  line-height: 1.2;
+}
+h1 {
+  font-family: "Limelight", sans-serif;
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+  margin-top: 1em;
+  margin-bottom: 1rem;
+}
+.subtle {
+  color: lightgrey;
+}
+a {
+  font-family: "Trirong", serif;
+}
+.categoryList a {
+  font-weight: bold;
+}

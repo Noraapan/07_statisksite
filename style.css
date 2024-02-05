@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* allmän style */
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 2rem;
+  margin-left: 6.25vw;
+  margin-right: 6.25vw;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: rgb(209, 207, 207);
+}
+a {
+  border-radius: 30px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.mainNav a {
+  text-decoration: none;
+  color: white;
+}
+.mainNav h1 span {
+  color: red;
+}
+
+.smallProduct p,
+a {
+  color: white;
+}
+
+h1,
+h2 {
+  margin-top: 1em;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 3rem;
+  letter-spacing: -0.1rem;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 2.441rem;
+  letter-spacing: -0.12rem;
+  line-height: 1.2;
+}
+/* kategori.html */
+.categorylist {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+.categorylist a {
+  text-decoration: none;
+  padding: 2em;
+  color: black;
+  background-color: white;
+}
+
+/* produktliste.html */
+.productlist main h2 {
+  grid-column: 1/-1;
+}
+
+.productlist article {
+  margin-bottom: 2rem;
+}
+
+.clothes_name {
+  font-size: 1.2rem;
+  color: white;
+}
+.clothes_price {
+  opacity: 70%;
+  color: white;
+}
+
+.discount :last-child {
+  color: black;
+  background-color: red;
+  padding: 0.2rem;
+}
+
+.discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.productlist article.soldOut img {
+  opacity: 50%;
+}
+
+/* produkt.html */
+.purchase {
+  padding: 1rem;
+  background-color: rgb(230, 228, 228);
+}
+
+.purchase h3 {
+  font-size: 2rem;
+  color: white;
+}
+.purchase p {
+  margin-bottom: 2rem;
+}
+
+label {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: bold;
+}
+
+select {
+  min-width: 100px;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.purchase button {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border: none;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: rgb(186, 183, 183);
+  cursor: pointer;
+}
+
+dt {
+  font-weight: bold;
+  color: white;
+}
+dd {
+  margin-left: 1rem;
+  color: white;
+}
+
+@media (min-width: 700px) {
+  .mainNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .productlist main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+    gap: 2rem;
+  }
+  .produktInfo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .produktImg {
+    grid-row: 1/5;
+    grid-column: 1/2;
+  }
+  .purchase {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+  .info {
+    grid-column: 2/3;
+    margin: 1rem;
+  }
+  .info dt,
+  dd {
+    color: black;
+  }
+}
