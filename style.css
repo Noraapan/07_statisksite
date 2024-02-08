@@ -4,11 +4,12 @@
   padding: 0;
 }
 
-/* allmän style */
-
-html {
-  font-family: Arial, Helvetica, sans-serif;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
+/* allmän style */
 
 body {
   margin: 2rem;
@@ -16,16 +17,10 @@ body {
   margin-right: 6.25vw;
   font-weight: 400;
   line-height: 1.6;
-  background-color: rgb(209, 207, 207);
+  background-color: rgb(159, 159, 159);
 }
 a {
-  border-radius: 30px;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+  border-radius: 25px;
 }
 
 .mainNav a {
@@ -33,7 +28,7 @@ img {
   color: white;
 }
 .mainNav h1 span {
-  color: #f45a5a;
+  color: #f3612c;
 }
 
 .smallProduct p,
@@ -63,13 +58,13 @@ h2 {
   line-height: 1.2;
 }
 /* kategori.html */
-.categorylist {
+.categoryList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
 }
 
-.categorylist a {
+.categoryList a {
   text-decoration: none;
   padding: 2em;
   color: black;
@@ -105,29 +100,40 @@ h2 {
   justify-content: space-between;
 }
 
-.productlist article.soldOut::before {
+.soldOut::before {
   content: "Sold Out";
   position: absolute;
   background-color: black;
   color: white;
   padding: 1rem;
 }
-.productlist article.soldOut img {
+.soldOut img {
   opacity: 50%;
 }
-
-/* produkt.html */
-.purchase {
+.hide {
+  display: none;
+}
+/*product.html */
+.single_clothes_text {
   padding: 1rem;
-  background-color: rgb(230, 228, 228);
+  background-color: rgb(186, 181, 181);
 }
 
-.purchase h3 {
+.single_clothes_text h3 {
   font-size: 2rem;
   color: white;
 }
-.purchase p {
+.single_clothes_text p {
   margin-bottom: 2rem;
+}
+
+dt {
+  font-weight: bold;
+  color: white;
+}
+dd {
+  margin-left: 1rem;
+  color: white;
 }
 
 label {
@@ -143,7 +149,7 @@ select {
   border-radius: 20px;
 }
 
-.purchase button {
+.single_clothes_text button {
   width: 100%;
   margin-top: 1rem;
   padding: 1rem;
@@ -155,15 +161,6 @@ select {
 button:hover {
   background-color: rgb(186, 183, 183);
   cursor: pointer;
-}
-
-dt {
-  font-weight: bold;
-  color: white;
-}
-dd {
-  margin-left: 1rem;
-  color: white;
 }
 
 @media (min-width: 700px) {
@@ -187,6 +184,28 @@ dd {
     grid-column: 1/2;
   }
   .purchase {
+    grid-row: 1/4;
+    grid-column: 2/3;
+  }
+  .info {
+    grid-column: 2/3;
+    margin: 1rem;
+  }
+  .info dt,
+  dd {
+    color: black;
+  }
+  /*grid før produkt.html*/
+  .single_clothes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .single_clothes_info {
+    grid-row: 1/5;
+    grid-column: 1/2;
+  }
+  .single_clothes_text {
     grid-row: 1/4;
     grid-column: 2/3;
   }
