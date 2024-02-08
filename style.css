@@ -26,6 +26,7 @@ a {
 .mainNav a {
   text-decoration: none;
   color: white;
+  padding-right: 1rem;
 }
 .mainNav h1 span {
   color: #f3612c;
