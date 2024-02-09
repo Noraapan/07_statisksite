@@ -59,17 +59,14 @@ h2 {
   line-height: 1.2;
 }
 /* kategori.html */
-.categoryList {
+.categories a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1em;
-}
-
-.categoryList a {
   text-decoration: none;
   padding: 2em;
   color: black;
-  background-color: white;
+  background-color: lightgrey;
 }
 
 /* produktliste.html */

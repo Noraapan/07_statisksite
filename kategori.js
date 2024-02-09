@@ -1,4 +1,4 @@
-fetch(`https://kea-alt-del.dk/t7/api/seasons`)
+fetch(`https://kea-alt-del.dk/t7/api/categories`)
   .then((response) => response.json())
   .then(dataRecieved);
 
@@ -10,8 +10,8 @@ function showCategories(showCategory) {
   const myCategory = document.querySelector("template").content;
   const myClone = myCategory.cloneNode(true);
 
-  myClone.querySelector("h2").textContent = showCategory.season;
-  myClone.querySelector("a").href = `produktliste.html?Urlinfo=${showCategory.season}`;
+  myClone.querySelector("h2").textContent = showCategory.category;
+  myClone.querySelector("a").href = `produktliste.html?Urlinfo=${showCategory.category}`;
 
   const parentElement = document.querySelector("main");
   parentElement.appendChild(myClone);
